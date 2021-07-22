@@ -13,12 +13,16 @@ export class InputsComponent implements OnInit {
   
   request: RequestCreate = {
     userId: 1,
-    value: 1,
-    category: "123",
+    value: 0,
+    category: "",
     output: false,
-    date: "10101020",
-    description: "123",
+    date: "",
+    description: "",
+  
+  
   }
+ 
+  
 
   inputs: ResponseInputs[] = [];
 

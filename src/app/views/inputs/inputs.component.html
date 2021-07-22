@@ -21,17 +21,23 @@
     </mat-form-field>
     
     <button (click)=save() mat-fab>+</button>
+    
+    
+
+    
 </div>
 <br>
 <div>
     <li *ngFor="let input of inputs; index as i;">
         input.output = false
-        <span>{{input.userId}} - </span> 
+        <span>{{input.userId}}
+            <button (click)=deleteInput(input.id) mat-fab>apagar</button>
+        </span> 
         <span>{{input.date}} - </span>
         <span>{{input.category}} - </span>
         <span>{{input.description}} - </span>
         <span>{{input.value}} - </span>
     </li>
-    <p>DERIK É UM FULEIRO</p>
+  
 </div>
 
