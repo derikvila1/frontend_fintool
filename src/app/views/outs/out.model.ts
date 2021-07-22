@@ -1,7 +1,7 @@
 import { DomPortal } from "@angular/cdk/portal";
 
 export interface RequestCreate {
-   
+
     userId: number;
     value: number;
     category: string;
@@ -21,7 +21,7 @@ export interface ResponseCreate {
     createAt: Date;
 }
 
-export interface ResponseInputs {
+export interface ResponseOuts {
 
     userId: number;
     value: number;
