@@ -9,18 +9,19 @@ import {RequestCreate, ResponseCreate, ResponseInputs} from "./input.model";
 
 export class InputService {
 
-  private url = "/api/inputs/cadastrar";
-
+  private url = "/api/inputs/";
   constructor(private http: HttpClient) { }
 
-  getInputs(): Observable<ResponseInputs>{
-    return this.http.get<ResponseInputs>(this.url)
+  getInputs(): Observable<ResponseInputs[]>{
+    return this.http.get<ResponseInputs[]>(this.url + "listar");
   }
   
-
+  deleteInput(id:number): Observable<any>{
+    return this.http.delete<number>(this.url + "deletar", {body:{id}});
+  }
   
   createInput(request: RequestCreate): Observable<ResponseCreate>{
-    return this.http.post<ResponseCreate>(this.url, request);
+    return this.http.post<ResponseCreate>(this.url + "cadastrar", request);
   }
 
 }

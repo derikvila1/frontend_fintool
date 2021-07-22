@@ -22,7 +22,7 @@ export interface ResponseCreate {
 }
 
 export interface ResponseInputs {
-
+    id: number;
     userId: number;
     value: number;
     category: string;
