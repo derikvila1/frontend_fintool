@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/views/login/auth.service';
 
 @Component({
   selector: 'app-sidenav',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidenavComponent implements OnInit {
 
-  constructor() { }
+  mostrarMenu: boolean = false;
+  constructor(private authService: AuthService){
 
-  ngOnInit(): void {
+  }
+  ngOnInit() {
+   
+    this.authService.mostrarMenuEmitter.subscribe(
+      mostrar => this.mostrarMenu = mostrar
+    );
   }
 
 }
