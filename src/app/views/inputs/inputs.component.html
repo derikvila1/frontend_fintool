@@ -1,43 +1,32 @@
-<div class="form"> 
-    
-    <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Valor</mat-label>
-        <input matInput placeholder="valor" [(ngModel)] = "request.value" >
-    </mat-form-field>
-    
-    <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Descrição</mat-label>
-        <input matInput placeholder="Descrição" [(ngModel)] = "request.description">
-    </mat-form-field>
-
-    <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Categoria</mat-label>
-        <input matInput placeholder="Descrição" [(ngModel)] = "request.category">
-    </mat-form-field>
-    
-    <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Data</mat-label>
-        <input matInput type="date" placeholder="Data" [(ngModel)] = "request.date" >
-    </mat-form-field>
-    
-    <button (click)=save() mat-fab>+</button>
+<div class="container">
     
     
+    <br>
 
     
+    <div class="form"> 
+        
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Valor</mat-label>
+            <input matInput placeholder="valor" [(ngModel)] = "request.value" >
+        </mat-form-field>
+        
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Descrição</mat-label>
+            <input matInput placeholder="Descrição" [(ngModel)] = "request.description">
+        </mat-form-field>
+        
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Categoria</mat-label>
+            <input matInput placeholder="Descrição" [(ngModel)] = "request.category">
+        </mat-form-field>
+        
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Data</mat-label>
+            <input matInput type="date" placeholder="Data" [(ngModel)] = "request.date" >
+        </mat-form-field>
+        
+        <button (click)=save() ><mat-icon>add</mat-icon> </button>
+    </div>
+
 </div>
-<br>
-<div>
-    <li *ngFor="let input of inputs; index as i;">
-        input.output = false
-        <span>{{input.userId}}
-            <button (click)=deleteInput(input.id) mat-fab>apagar</button>
-        </span> 
-        <span>{{input.date}} - </span>
-        <span>{{input.category}} - </span>
-        <span>{{input.description}} - </span>
-        <span>{{input.value}} - </span>
-    </li>
-  
-</div>
-

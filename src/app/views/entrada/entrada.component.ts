@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SimpleChange } from '@angular/core';
 import { InputService } from '../inputs/input.service';
 import { ResponseInputs } from '../inputs/input.model';
 import { MatDialog } from '@angular/material/dialog';
@@ -8,17 +8,18 @@ import { Router } from '@angular/router';
 
 
 @Component({
-  selector: 'app-outs',
-  templateUrl: './outs.component.html',
-  styleUrls: ['./outs.component.css']
+  selector: 'app-entrada',
+  templateUrl: './entrada.component.html',
+  styleUrls: ['./entrada.component.css']
 })
-export class OutsComponent implements OnInit {
 
+export class EntradaComponent implements OnInit {
+  
   inputs: ResponseInputs[] = [];
 
   constructor(private inputService: InputService,public dialog: MatDialog,private authService: AuthService,private route: Router) { }
-
-  ngOnInit(): void {this.updateInputs();
+  ngOnInit(): void {
+    this.updateInputs();
 
     if (this.authService.usuarioAutenticado === false) {
       this.route.navigate(['/login'])
@@ -44,6 +45,11 @@ export class OutsComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });
+  }
+  
+  ngOnChanges(inputs: SimpleChange){
+    this.updateInputs()
+
   }
 
 }

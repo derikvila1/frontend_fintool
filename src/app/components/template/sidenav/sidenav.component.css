@@ -1,18 +1,14 @@
 .container {
-    background-color: salmon;
+ background-color: white;
     display: flex;
-    
-    min-height: calc(100% - 70px);
-    
-    
-
+    flex-direction: column;
 }
 .sideContent{
-    background-color: seagreen;
+   
     display: flex;
+    flex-direction: column;
     width: 100%;
-    justify-content: center;
-    
+    height: 100%;
 }
 .sidenav {
     background-color: #156;

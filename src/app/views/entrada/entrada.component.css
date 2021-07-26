@@ -1,0 +1,18 @@
+.master {
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    height: 665px;
+    justify-items: center;
+    align-content: center;
+    
+   
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    height: 90%;
+    width: 90%;    
+    
+}

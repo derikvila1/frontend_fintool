@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { RequestCreate, ResponseInputs } from './input.model';
 import { InputService } from './input.service';
+import { DialogContentExampleDialog } from '../dialog/dialog.component';
 
 
 @Component({
@@ -8,6 +10,7 @@ import { InputService } from './input.service';
   templateUrl: './inputs.component.html',
   styleUrls: ['./inputs.component.css']
 })
+
 
 export class InputsComponent implements OnInit {
   
@@ -18,15 +21,13 @@ export class InputsComponent implements OnInit {
     output: false,
     date: "",
     description: "",
-  
-  
   }
- 
-  
-
+   
   inputs: ResponseInputs[] = [];
 
-  constructor(private inputService: InputService) { }
+
+
+  constructor(private inputService: InputService, public dialog: MatDialog ) { }
   ngOnInit(): void {
     this.updateInputs();
   }
@@ -42,6 +43,7 @@ export class InputsComponent implements OnInit {
     this.inputService.deleteInput(id).subscribe(res=>{
       console.log(res)
       this.updateInputs();
+      
     });
   }
 
@@ -49,6 +51,15 @@ export class InputsComponent implements OnInit {
     console.log(this.request);
     this.inputService.createInput(this.request).subscribe(res => {
       this.updateInputs();
+   
+
+    });
+  }
+  openDialog() {
+    const dialogRef = this.dialog.open(DialogContentExampleDialog);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
     });
   }
 

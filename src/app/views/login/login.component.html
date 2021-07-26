@@ -1,22 +1,45 @@
 <div class="loginContainer">
 
-   
+    <div class="form" >
 
-          <mat-form-field class="form"  >
-            <mat-label >Usuário</mat-label>
-            <input [(ngModel)] = usuario.nome id="usuario" matInput placeholder="Sigite seu Usuário" type="text" value="">
+      <mat-form-field >
+        <mat-label   >Usuário</mat-label >
+          <input 
+          [(ngModel)] = usuario.nome 
+          id="usuario" 
+          matInput 
+          placeholder="Sigite seu Usuário" 
+          type="text" 
+            value=""
+            >
+          </mat-form-field >
+          
+          <mat-form-field   >
+            <mat-label color= "black">Senha</mat-label>
+            <input [(ngModel)] = usuario.senha 
+            id="senha" matInput 
+            placeholder="Digite sua senha"
+            type="password" value="">
           </mat-form-field>
-
-          <mat-form-field class="form" >
-            <mat-label>Senha</mat-label>
-            <input [(ngModel)] = usuario.senha id="senha" matInput placeholder="Digite sua senha" type="password" value="">
-          </mat-form-field>
-
+        </div>
+          
+        <div class="divbutton">
+          
           <button 
+          class="button"
           mat-button 
           type="submit" 
           name="action" 
           (click)="fazerLogin()" >
           entrar</button>
-
+          
+          <button 
+          class="button"
+          mat-button 
+          type="submit" 
+          name="action" 
+          (click)="fazerLogin()" >
+          cadastrar</button>
+          
+        </div>
 </div>

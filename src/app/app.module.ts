@@ -20,6 +20,11 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './views/login/login.component';
 import { AuthService } from './views/login/auth.service';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DialogComponent, DialogContentExampleDialog } from './views/dialog/dialog.component';
+import { EntradaComponent } from './views/entrada/entrada.component'; 
+
+
 
 @NgModule({
   declarations: [
@@ -30,6 +35,9 @@ import { AuthService } from './views/login/auth.service';
     InputsComponent,
     OutsComponent,
     LoginComponent,
+    DialogComponent,
+    DialogContentExampleDialog,
+    EntradaComponent
 
   ],
   imports: [
@@ -45,6 +53,9 @@ import { AuthService } from './views/login/auth.service';
     MatButtonModule,
     FormsModule,
     HttpClientModule,
+    MatDialogModule,
+    
+
     
   ],
   providers: [AuthService],

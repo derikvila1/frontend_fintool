@@ -5,6 +5,7 @@ import { HomeComponent } from "./views/home/home.component";
 import { InputsComponent } from "./views/inputs/inputs.component";
 import { OutsComponent } from "./views/outs/outs.component"
 import { LoginComponent } from './views/login/login.component';
+import { EntradaComponent } from './views/entrada/entrada.component';
 
 const routes: Routes = [
   {
@@ -14,7 +15,7 @@ const routes: Routes = [
 }, 
 {
   path: "inputs",
-  component: InputsComponent
+  component: EntradaComponent
 },
 {
   path: "outs",
