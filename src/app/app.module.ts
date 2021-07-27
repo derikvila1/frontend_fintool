@@ -23,6 +23,7 @@ import { AuthService } from './views/login/auth.service';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DialogComponent, DialogContentExampleDialog } from './views/dialog/dialog.component';
 import { EntradaComponent } from './views/entrada/entrada.component'; 
+import {MatDatepickerModule} from '@angular/material/datepicker'; 
 
 
 
@@ -54,6 +55,7 @@ import { EntradaComponent } from './views/entrada/entrada.component';
     FormsModule,
     HttpClientModule,
     MatDialogModule,
+    MatDatepickerModule,
     
 
     

@@ -14,6 +14,8 @@ import { Router } from '@angular/router';
 })
 
 export class EntradaComponent implements OnInit {
+
+  startDate = new Date(1990, 0, 1);
   
   inputs: ResponseInputs[] = [];
 
