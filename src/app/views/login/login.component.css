@@ -23,6 +23,7 @@
 }
 
 .button{
+<<<<<<< HEAD
     margin-bottom: 20px;
     width: 100px;
     background-color: #155;
@@ -33,10 +34,23 @@
     text-align: center;
     padding: 0;
     text-transform: uppercase;
+=======
+    margin-bottom: 30px;
+    width: 90px;
+    background-color: #155;
+    border: solid 2px;
+    border-color: springgreen;
+    color: whitesmoke;
+    margin-right: 20px;
+    text-align: center;
+   
+>>>>>>> f3d3e94ed4acd3f9302aa37881f48d209394db4f
 }
 .divbutton {
     display: flex;
     flex-direction: row;
+    text-align: center;
+    margin: 0 auto;
     
 }
 
