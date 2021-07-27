@@ -8,7 +8,7 @@
           [(ngModel)] = usuario.nome 
           id="usuario" 
           matInput 
-          placeholder="Sigite seu Usuário" 
+          placeholder="Digite seu usuário" 
           type="text" 
             value=""
             >
@@ -30,16 +30,19 @@
           mat-button 
           type="submit" 
           name="action" 
+        
           (click)="fazerLogin()" >
-          entrar</button>
-          
+          Entrar</button>
+
           <button 
           class="button"
           mat-button 
           type="submit" 
           name="action" 
-          (click)="fazerLogin()" >
-          cadastrar</button>
           
+          (click)="fazerLogin()" >
+          Cadastrar</button>
         </div>
+
+        
 </div>

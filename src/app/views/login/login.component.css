@@ -23,18 +23,21 @@
 }
 
 .button{
-    margin-bottom: 20px;
-    width: 80px;
+    margin-bottom: 30px;
+    width: 90px;
     background-color: #155;
     border: solid 2px;
     border-color: springgreen;
-    color: black;
+    color: whitesmoke;
     margin-right: 20px;
+    text-align: center;
    
 }
 .divbutton {
     display: flex;
     flex-direction: row;
+    text-align: center;
+    margin: 0 auto;
     
 }
 
