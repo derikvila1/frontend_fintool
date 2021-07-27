@@ -18,6 +18,7 @@ export class EntradaComponent implements OnInit {
   inputs: ResponseInputs[] = [];
 
   constructor(private inputService: InputService,public dialog: MatDialog,private authService: AuthService,private route: Router) { }
+  
   ngOnInit(): void {
     this.updateInputs();
 
@@ -46,10 +47,7 @@ export class EntradaComponent implements OnInit {
       console.log(`Dialog result: ${result}`);
     });
   }
-  
-  ngOnChanges(inputs: SimpleChange){
-    this.updateInputs()
 
-  }
+
 
 }

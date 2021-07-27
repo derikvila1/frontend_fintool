@@ -1,24 +1,30 @@
 <div class="master">
 
     <div class="container">
-        
-        <mat-nav-list>
-            <mat-list-item *ngFor="let input of inputs; index as i;">
-                <span>Valor: {{input.value}} reais - </span>
-        <span>Data: {{input.date}} - </span>
-        <span>Categoria: {{input.category}} - </span>
-        <span>Descrição {{input.description}}  </span>
-        
-        <button (click)=deleteInput(input.id) ><mat-icon>delete</mat-icon></button>
-        
-        
-    </mat-list-item>
-</mat-nav-list>
+        <div class="title">
+            <h1 >
+                Saidas
+            </h1>
+        </div>
+
+        <mat-nav-list class="navlist">
+            <mat-list-item class="listitem" *ngFor="let input of inputs; index as i;">
+                <div class="datdesc">
+                    <span>{{input.description}}  </span>
+                    <span>Data: {{input.date}}  </span>
+                </div>
+                <div class="value">
+                    <span>Valor:  R$ {{input.value}} reais  </span>
+                </div>
+                <button mat-button (click)=deleteInput(input.id) ><mat-icon>delete_outline
+                </mat-icon></button>
+            </mat-list-item>
+        </mat-nav-list>
 
 
-<button mat-button (click)="openDialog()">Open dialog</button>
-<button mat-button (click)="updateInputs()">atualizar</button>
+        <button mat-button (click)="openDialog()">Open dialog</button>
+        <button mat-button (click)="updateInputs()">atualizar</button>
 
 
-</div>
+    </div>
 </div>

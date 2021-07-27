@@ -5,7 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { DialogContentExampleDialog } from '../dialog/dialog.component';
 import { AuthService } from '../login/auth.service';
 import { Router } from '@angular/router';
-
+ 
 
 @Component({
   selector: 'app-outs',
