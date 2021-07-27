@@ -24,13 +24,15 @@
 
 .button{
     margin-bottom: 20px;
-    width: 80px;
+    width: 100px;
     background-color: #155;
     border: solid 2px;
     border-color: springgreen;
-    color: black;
+    color: white;
     margin-right: 20px;
-   
+    text-align: center;
+    padding: 0;
+    text-transform: uppercase;
 }
 .divbutton {
     display: flex;

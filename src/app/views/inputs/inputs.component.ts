@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/views/login/auth.service';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { RequestCreate, ResponseInputs } from './input.model';
 import { InputService } from './input.service';
@@ -24,19 +25,20 @@ export class InputsComponent implements OnInit {
   }
    
   inputs: ResponseInputs[] = [];
+  
+  @Output() updateEvent = new EventEmitter<string>();
 
 
 
-  constructor(private inputService: InputService, public dialog: MatDialog ) { }
+
+  constructor(private inputService: InputService, public dialog: MatDialog, private authService: AuthService ) { }
   ngOnInit(): void {
     this.updateInputs();
   }
 
   updateInputs(){
-    this.inputService.getInputs().subscribe(res => {
-      console.log(res);
-      this.inputs = res;
-    });
+    this.authService.updateEmitter.emit(true);
+
   }
 
   deleteInput(id:number){

@@ -9,13 +9,17 @@ import { AuthService } from 'src/app/views/login/auth.service';
 export class HeaderComponent implements OnInit {
 
   mostrarMenu: boolean = false;
+  user:{id:string, name:string, email:string}|null = null
   constructor(private authService: AuthService){
-
   }
   ngOnInit() {
    
     this.authService.mostrarMenuEmitter.subscribe(
-      mostrar => this.mostrarMenu = mostrar
+      mostrar => {
+        this.mostrarMenu = mostrar
+        this.user = this.authService.getUser();
+      }
+      
     );
   }
   
