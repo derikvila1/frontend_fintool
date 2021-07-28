@@ -20,6 +20,7 @@ export class OutsComponent implements OnInit {
 
   ngOnInit(): void {this.updateInputs();
 
+    this.authService.updateEmitter.subscribe(value=>value && this.updateInputs());
     if (this.authService.usuarioAutenticado === false) {
       this.route.navigate(['/login'])
       

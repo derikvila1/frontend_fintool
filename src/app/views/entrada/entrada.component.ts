@@ -16,7 +16,7 @@ import { Router } from '@angular/router';
 
 export class EntradaComponent implements OnInit {
   
-  
+   
   inputs: ResponseInputs[] = [];
   
   constructor(private inputService: InputService,public dialog: MatDialog,private authService: AuthService,private route: Router) { }
