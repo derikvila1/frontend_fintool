@@ -11,6 +11,8 @@ import { Usuario } from './usuario';
 export class LoginComponent implements OnInit {
 
    usuario: Usuario = new Usuario();
+   cadUsuario: {name:string, email:string, password:string} = {name:'', email:'', password:''};
+   cadastrar: boolean = false;
 
   constructor(private authService: AuthService) { }
 
@@ -18,9 +20,15 @@ export class LoginComponent implements OnInit {
   }
   
   fazerLogin(){
-
-   
    this.authService.fazerLogin(this.usuario);
   }
-
+  fazerCadastro(){
+    const res = this.authService.cadastrar(this.cadUsuario);
+    res.subscribe((res)=>{
+      this.toggleCadastrar();
+    })
+  }
+  toggleCadastrar(){
+    this.cadastrar = !this.cadastrar;
+  }
 }

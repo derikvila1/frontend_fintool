@@ -23,15 +23,16 @@
 }
 
 .button{
-    margin-bottom: 30px;
-    width: 90px;
+    margin-bottom: 20px;
+    width: 100px;
     background-color: #155;
     border: solid 2px;
     border-color: springgreen;
-    color: whitesmoke;
+    color: white;
     margin-right: 20px;
     text-align: center;
-   
+    padding: 0;
+    text-transform: uppercase;
 }
 .divbutton {
     display: flex;

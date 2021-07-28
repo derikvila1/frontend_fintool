@@ -4,5 +4,5 @@
             <img class="logo" src="assets/images/logo.png" alt="logo">
         </a>
     </span>
-    <h1>Bem vindo!</h1>
+    <h1>Bem vindo {{user != null ? user.name.toUpperCase() : ''}}!</h1>
 </mat-toolbar>

@@ -18,5 +18,7 @@ export class SidenavComponent implements OnInit {
       mostrar => this.mostrarMenu = mostrar
     );
   }
-
+  logout(){
+    this.authService.logOut();
+  }
 }

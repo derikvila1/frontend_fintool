@@ -1,3 +1,4 @@
+import { InputsComponent } from './../inputs/inputs.component';
 import { Component, OnInit, SimpleChange } from '@angular/core';
 import { InputService } from '../inputs/input.service';
 import { ResponseInputs } from '../inputs/input.model';
@@ -14,21 +15,22 @@ import { Router } from '@angular/router';
 })
 
 export class EntradaComponent implements OnInit {
-
+  
   
   inputs: ResponseInputs[] = [];
-
+  
   constructor(private inputService: InputService,public dialog: MatDialog,private authService: AuthService,private route: Router) { }
   
   ngOnInit(): void {
     this.updateInputs();
-
+    
+    this.authService.updateEmitter.subscribe(value=>value && this.updateInputs());
     if (this.authService.usuarioAutenticado === false) {
       this.route.navigate(['/login'])
       
     }
   }
-
+  
   updateInputs(){
     this.inputService.getInputs().subscribe(res => {
       console.log(res);
