@@ -23,7 +23,11 @@ import { AuthService } from './views/login/auth.service';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DialogComponent, DialogContentExampleDialog } from './views/dialog/dialog.component';
 import { EntradaComponent } from './views/entrada/entrada.component'; 
-import {MatDatepickerModule} from '@angular/material/datepicker'; 
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { GraficoComponent } from './views/grafico/grafico.component';
+import { Grafico2Component } from './views/grafico2/grafico2.component'; 
+import {MatCheckboxModule} from '@angular/material/checkbox'; 
+
 
 
 
@@ -39,7 +43,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     LoginComponent,
     DialogComponent,
     DialogContentExampleDialog,
-    EntradaComponent
+    EntradaComponent,
+    GraficoComponent,
+    Grafico2Component
 
   ],
   imports: [
@@ -57,8 +63,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     HttpClientModule,
     MatDialogModule,
     MatDatepickerModule,
-
-   
+    MatCheckboxModule
+  
     
 
     

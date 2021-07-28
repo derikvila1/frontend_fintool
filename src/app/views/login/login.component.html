@@ -82,6 +82,7 @@
                 placeholder="Digite sua senha"
                 type="password" value="">
               </mat-form-field>
+         
         
         </div>     
 
@@ -95,6 +96,15 @@
               name="action" 
               (click)="fazerCadastro()"
               >CADASTRAR
+              </button>
+
+              <button 
+              class="button"
+              mat-button 
+              type="submit" 
+              name="action" 
+              (click)="toggleCadastrar()"
+              >Cancelar
               </button>
               
             </div>

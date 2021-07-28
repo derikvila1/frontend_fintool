@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from "./views/home/home.component";
-import { InputsComponent } from "./views/inputs/inputs.component";
+
 import { OutsComponent } from "./views/outs/outs.component"
 import { LoginComponent } from './views/login/login.component';
 import { EntradaComponent } from './views/entrada/entrada.component';
+import { GraficoComponent } from './views/grafico/grafico.component';
+
 
 const routes: Routes = [
   {
@@ -24,6 +26,10 @@ const routes: Routes = [
 {
   path: "login",
   component: LoginComponent
+},
+{
+  path: "grafico",
+  component: GraficoComponent
 },
 
 ];

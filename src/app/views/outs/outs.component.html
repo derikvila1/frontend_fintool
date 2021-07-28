@@ -10,21 +10,23 @@
 
         <mat-nav-list class="navlist">
             <mat-list-item class="listitem" *ngFor="let input of inputs; index as i;">
-                <div class="datdesc">
-                    <span>{{input.description}}  </span>
-                    <span>Data: {{input.date}}  </span>
-                </div>
-                <div class="value">
-                    <span>Valor:  R$ {{input.value}} reais  </span>
-                </div>
-                <button mat-button (click)=deleteInput(input.id) ><mat-icon>delete_outline
-                </mat-icon></button>
+            
+                    <div class="datdesc">
+                        <span>{{input.description}}  </span>
+                        <span>Data: {{input.date}}  </span>
+                    </div>
+                    <div class="value">
+                        <span>Valor:  R$ {{input.value}} reais  </span>
+                    </div>
+                    <button mat-button (click)=deleteInput(input.id) ><mat-icon>delete_outline
+                    </mat-icon></button>
+              
             </mat-list-item>
         </mat-nav-list>
 
 
         <button mat-button (click)="openDialog()">Adicionar Movimentação</button>
- 
+        <button mat-button (click)="onlyOut()">Adicionar Movimentação</button>
 
 
     </div>

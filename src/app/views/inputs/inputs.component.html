@@ -25,6 +25,7 @@
             <mat-label>Data</mat-label>
             <input matInput type="date" placeholder="Data" [(ngModel)] = "request.date" >
         </mat-form-field>
+        <mat-checkbox class="example-full-width" [(ngModel)]="request.output">Saida</mat-checkbox>
         
         <button (click)=save() ><mat-icon>add</mat-icon> </button>
     </div>

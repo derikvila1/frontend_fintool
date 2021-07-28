@@ -9,21 +9,19 @@ import { AuthService } from '../login/auth.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent implements OnInit {
 
  mostrarMenu = false; 
 
-  
   constructor(private authService: AuthService, private route: Router,){
 
   }
   ngOnInit() {
     if (this.authService.usuarioAutenticado === false) {
       this.route.navigate(['/login'])
-
-      
-    
     }
+    
   }
    
 }

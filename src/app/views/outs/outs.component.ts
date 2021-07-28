@@ -25,12 +25,21 @@ export class OutsComponent implements OnInit {
       this.route.navigate(['/login'])
       
     }
-  }
 
+  }
+  
+  onlyOut(){
+    for (let i in this.inputs){
+      if (this.inputs[i].output === false) {
+        this.inputs[i] === null
+      }
+    }
+  }
   updateInputs(){
     this.inputService.getInputs().subscribe(res => {
       console.log(res);
       this.inputs = res;
+      this.onlyOut();
     });
   }
   deleteInput(id:number){
