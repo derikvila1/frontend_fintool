@@ -1,8 +1,8 @@
 .master {
     
+    height: 665px;
     display: flex;
     flex-direction: column;
-    height: 665px;
     justify-items: center;
     align-content: center;
     

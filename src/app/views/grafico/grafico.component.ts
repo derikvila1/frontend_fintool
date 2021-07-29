@@ -22,8 +22,7 @@ export class GraficoComponent implements OnInit {
   constructor() { 
     Chart.register(...registerables);
   }
-  
-  
+    
   ngOnInit(): void {}
 
   selectedValue: string | undefined;
@@ -43,7 +42,6 @@ export class GraficoComponent implements OnInit {
     {value: 'Outubro', viewValue: 'Outubro'},
     {value: 'Novembro', viewValue: 'Novembro'},
     {value: 'Dezembro', viewValue: 'Dezembro'},
-   
   ];
 
   anos:Ano[] = [
@@ -53,10 +51,6 @@ export class GraficoComponent implements OnInit {
     {value:'2020', viewValue:'2020'},
     {value:'2021', viewValue:'2021'},
   ]
-
-
-  
-  
   canvas: any;
   ctx: any;
   @ViewChild('mychart') mychart:any;
@@ -73,16 +67,17 @@ export class GraficoComponent implements OnInit {
               data: [10, 15, 30, 50],
               backgroundColor: "rgb(115 185 243 / 65%)",
               borderColor: "#007ee7",
-              //fill: true,
+            
           },
+
           {
             label: 'Invested Amount',
             data: [20, 20, 40, 60, 80],
             backgroundColor: "#47a0e8",
             borderColor: "#007ee7",
-            //fill: true,
+            
         }],
-          labels: ['January 2019', 'February 2019', 'March 2019', 'April 2019']
+          labels: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro',]
       },
   });
   }
