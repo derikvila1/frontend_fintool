@@ -1,12 +1,13 @@
 <div >
 
-    <canvas id="myChart" #mychart></canvas>
+    <canvas   id="myChart" #mychart></canvas>
 
-<div style="background-color: rgb(29, 29, 29);">
+<div style="background-color: #156;border-radius: 5px; display: flex; flex-direction: row;">
+    <h1 style="color: white; padding-right: 50px; padding-left: 50px;">Selecione o ano :</h1>
 
-    <mat-form-field appearance="fill">
-        <mat-label>Selecione o ano</mat-label>
-        <mat-select [(ngModel)]="selectedYear" name="ano" (ngModelChange)="updates(inputs,selectedYear)">
+    <mat-form-field  appearance="fill" >
+        <mat-label >Selecione o ano</mat-label>
+        <mat-select  [(ngModel)]="selectedYear" name="ano" (ngModelChange)="updates(inputs,selectedYear)">
             <mat-option *ngFor="let ano of anos" [value]="ano.value">
                 {{ano.viewValue}}
             </mat-option>

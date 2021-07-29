@@ -1,8 +1,10 @@
 <div style="width:100%;">
     <canvas id="myChart" #mychart></canvas>
     
-    <div style="background-color: blueviolet;">
+    <div style="background-color: #156;border-radius: 5px; display: flex; flex-direction: row;">
 
+        <h1 style="color: white; padding-right: 50px; padding-left: 50px;">Selecione o mês:</h1>
+ 
         <mat-form-field appearance="fill">
             <mat-label>Selecione o mês</mat-label>
             <mat-select [(ngModel)]="selectedMonth" name="mes" (ngModelChange)="updatesMonth()">

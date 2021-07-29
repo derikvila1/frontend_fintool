@@ -56,14 +56,14 @@ export class GraficoComponent implements OnInit {
           datasets: [{
               label: 'Entradas',
               data: this.data.map(item=> Number(item.input)),
-              backgroundColor: "rgb(115 185 243 / 65%)",
-              borderColor: "#007ee7",
+              backgroundColor: "#26b149b4",
+              borderColor: "#26b149b4",
               //fill: true,
           },
           {
             label: 'Saídas',
             data: this.data.map(item=> Number(item.output)),
-            backgroundColor: "#47a0e8",
+            backgroundColor: "#881f36",
             borderColor: "#007ee7",
             //fill: true,
         }],

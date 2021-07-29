@@ -18,7 +18,11 @@
         
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Categoria</mat-label>
-            <input matInput placeholder="Descrição" [(ngModel)] = "request.category">
+            <select matNativeControl required [(ngModel)] = "request.category">
+                <option value="Recorrente">Recorrente</option>
+                <option value="Não Recorrente">Não Recorrente</option>
+            </select>
+           
         </mat-form-field>
         
         <mat-form-field class="example-full-width" appearance="fill">
