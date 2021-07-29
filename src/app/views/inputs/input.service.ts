@@ -12,8 +12,8 @@ export class InputService {
   private url = "/api/inputs/";
   constructor(private http: HttpClient) { }
 
-  getInputs(): Observable<ResponseInputs[]>{
-    return this.http.get<ResponseInputs[]>(this.url + "listar");
+  getInputs(id:number): Observable<ResponseInputs[]>{
+    return this.http.get<ResponseInputs[]>(this.url + "listar", {params:{id:id}}  );
   }
   
   deleteInput(id:number): Observable<any>{

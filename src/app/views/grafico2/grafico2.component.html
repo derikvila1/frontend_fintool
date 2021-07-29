@@ -5,23 +5,22 @@
 
         <mat-form-field appearance="fill">
             <mat-label>Selecione o mês</mat-label>
-            <mat-select [(ngModel)]="selectedValue" name="mes">
+            <mat-select [(ngModel)]="selectedMonth" name="mes" (ngModelChange)="updatesMonth()">
                 <mat-option *ngFor="let mes of meses" [value]="mes.value">
                     {{mes.viewValue}}
                 </mat-option>
             </mat-select>
         </mat-form-field>
     
-    
-    
         <mat-form-field appearance="fill">
             <mat-label>Selecione o ano</mat-label>
-            <mat-select [(ngModel)]="selectedValue2" name="ano">
+            <mat-select [(ngModel)]="selectedYear" name="ano" (ngModelChange)="updates(inputs,selectedYear)">
                 <mat-option *ngFor="let ano of anos" [value]="ano.value">
                     {{ano.viewValue}}
                 </mat-option>
             </mat-select>
         </mat-form-field>
+
         
     </div>
 

@@ -16,7 +16,7 @@ import { DialogContentExampleDialog } from '../dialog/dialog.component';
 export class InputsComponent implements OnInit {
   
   request: RequestCreate = {
-    userId: 1,
+    userId: this.authService.user?.id || 0,
     value: 0,
     category: "",
     output: false,

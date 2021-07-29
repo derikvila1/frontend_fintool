@@ -29,14 +29,10 @@ export class OutsComponent implements OnInit {
   }
   
   onlyOut(){
-    for (let i in this.inputs){
-      if (this.inputs[i].output === false) {
-        this.inputs[i] === null
-      }
-    }
+    this.inputs = this.inputs.filter((item)=>item.output);
   }
   updateInputs(){
-    this.inputService.getInputs().subscribe(res => {
+    this.inputService.getInputs(Number(this.authService.user?.id)).subscribe(res => {
       console.log(res);
       this.inputs = res;
       this.onlyOut();
@@ -44,7 +40,6 @@ export class OutsComponent implements OnInit {
   }
   deleteInput(id:number){
     this.inputService.deleteInput(id).subscribe(res=>{
-      console.log(res)
       this.updateInputs();
     });
   }
