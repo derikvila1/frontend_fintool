@@ -10,7 +10,7 @@ export class AuthService {
   private url = "/api/users/";
 
   usuarioAutenticado: boolean = false;
-  user:{id:string, name:string, email:string}|null = null;
+  user:{id:number, name:string, email:string}|null = null;
 
   mostrarMenuEmitter = new EventEmitter<boolean>();
   updateEmitter = new EventEmitter<boolean>();
@@ -44,7 +44,7 @@ export class AuthService {
   getUser(){
     return this.user;
   }
-  setUser(user:{id:string, name:string, email:string}|null){
+  setUser(user:{id:number, name:string, email:string}|null){
     this.user = user;
   }
 }
