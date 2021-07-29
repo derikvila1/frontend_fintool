@@ -30,14 +30,11 @@ export class EntradaComponent implements OnInit {
       
     }
   }
-  onlyIn(){
-    this.inputs = this.inputs.filter((item)=>!item.output);
-  }
+  
   updateInputs(){
-    this.inputService.getInputs(Number(this.authService.user?.id)).subscribe(res => {
+    this.inputService.getInputs().subscribe(res => {
       console.log(res);
       this.inputs = res;
-      this.onlyIn();
     });
   }
   deleteInput(id:number){

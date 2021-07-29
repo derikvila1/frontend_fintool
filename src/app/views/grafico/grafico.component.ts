@@ -67,7 +67,6 @@ export class GraficoComponent implements OnInit {
               data: [10, 15, 30, 50],
               backgroundColor: "rgb(115 185 243 / 65%)",
               borderColor: "#007ee7",
-              
             
           },
 

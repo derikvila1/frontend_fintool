@@ -2,11 +2,22 @@
 
     <canvas id="myChart" #mychart></canvas>
 
-<div style="background-color: rgb(29, 29, 29);">
+<div style="background-color: blueviolet;">
+
+    <mat-form-field appearance="fill">
+        <mat-label>Selecione o mês</mat-label>
+        <mat-select [(ngModel)]="selectedValue" name="mes">
+            <mat-option *ngFor="let mes of meses" [value]="mes.value">
+                {{mes.viewValue}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+
 
     <mat-form-field appearance="fill">
         <mat-label>Selecione o ano</mat-label>
-        <mat-select [(ngModel)]="selectedYear" name="ano" (ngModelChange)="updates(inputs,selectedYear)">
+        <mat-select [(ngModel)]="selectedValue2" name="ano">
             <mat-option *ngFor="let ano of anos" [value]="ano.value">
                 {{ano.viewValue}}
             </mat-option>
